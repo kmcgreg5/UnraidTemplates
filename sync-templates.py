@@ -2,11 +2,14 @@ from glob import glob
 from pathlib import Path
 from shutil import copy2
 from sys import argv
+import datetime
 
 def compare_files(origin, mirror):
     if mirror.exists() is False:
         return True
     
+    print(datetime.datetime.fromtimestamp(int(origin.stat().st_mtime)))
+    print(datetime.datetime.fromtimestamp(int(mirror.stat().st_mtime)))
     return int(origin.stat().st_mtime) > int(mirror.stat().st_mtime)
 
 
