@@ -3,21 +3,17 @@ from pathlib import Path
 from shutil import copy2
 from sys import argv
 
-def compare_files(file_1, file_2):
-    if file_2.exists() is False:
+def compare_files(origin, mirror):
+    if mirror.exists() is False:
         return True
 
-    return file_1.stat().st_mtime > file_2.stat().stmtime
+    return origin.stat().st_mtime > mirror.stat().stmtime
 
 
-def sync_file(templates_path, file, prefix):
-    def __get_filename():
-        return f'{prefix + "-" if prefix else ""}{file}'
-
-    file_path = templates_path / __get_filename(file, prefix)
-    if compare_files(Path(file), file_path):
-        copy2(file, str(file_path))
-        print(f'{file_path} updated.')
+def sync_file(origin, mirror):
+    if compare_files(Path(origin), mirror):
+        copy2(origin, str(mirror))
+        print(f'{mirror} updated.')
 
 
 def main():
@@ -33,8 +29,9 @@ def main():
         prefix = argv[1]
 
     file_list = [x for x in glob("*.xml") if x != "template.xml"]
-    for file in file_list:
-        sync_file(templates_path, file, prefix)
+    for origin in file_list:
+        mirror = templates_path / f'{prefix + "-" if prefix else ""}{origin}'
+        sync_file(origin, mirror)
 
 if __name__ == '__main__':
     main()
