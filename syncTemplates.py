@@ -2,7 +2,6 @@ from glob import glob
 from pathlib import Path
 from shutil import copy2
 from sys import argv
-import datetime
 
 def compare_files(origin, mirror):
     if mirror.exists() is False:
