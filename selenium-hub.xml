@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+    <Container version="2">
+    <Name>selenium-hub</Name>
+    <Repository>selenium/selenium-hub</Repository>
+    <Registry>https://hub.docker.com/r/selenium/hub</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support></Support>
+    <Project>https://github.com/SeleniumHQ/docker-selenium#hub-and-nodes</Project>
+    <Overview>A hub for Selenium containers.</Overview>
+    <WebUI>http://[IP]:[PORT:4444]</WebUI>
+    <TemplateURL/>
+    <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <DonateText/>
+    <DonateLink/>
+</Container>
