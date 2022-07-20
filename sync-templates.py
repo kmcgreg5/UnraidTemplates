@@ -6,9 +6,8 @@ from sys import argv
 def compare_files(origin, mirror):
     if mirror.exists() is False:
         return True
-    print(origin.stat().st_mtime)
-    print(mirror.stat().st_mtime)
-    return origin.stat().st_mtime > mirror.stat().st_mtime
+    
+    return int(origin.stat().st_mtime) > int(mirror.stat().st_mtime)
 
 
 def sync_file(origin, mirror):
