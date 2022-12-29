@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
     <Container version="2">
-    <Name>logseq</Name>ghcr.io/logseq/logseq-webapp:latest
-    <Repository>logseq/logseq-webapp</Repository>
+    <Name>logseq</Name>
+    <Repository>ghcr.io/logseq/logseq-webapp</Repository>
     <Registry>https://ghcr.io/logseq/logseq-webapp</Registry>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
