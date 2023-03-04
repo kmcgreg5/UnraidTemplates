@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+    <Container version="1">
+    <Name>syncovery</Name>
+    <Repository>stefanruepp/syncoverycl</Repository>
+    <Registry>https://hub.docker.com/r/stefanruepp/syncoverycl</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support></Support>
+    <Project>https://github.com/MyUncleSam/docker-syncovery</Project>
+    <Overview>A Syncovery backup container.</Overview>
+    <WebUI>http://[IP]:[PORT:8999]</WebUI>
+    <TemplateURL/>
+    <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <DonateText/>
+    <DonateLink/>
+</Container>
